@@ -13,9 +13,12 @@ Forwarding probability
   - graph-file
 The adjacency matrix of the users. This is expected to be an n x n matrix
 e.g.
+```sh
 0 1 0
 1 0 1
 0 1 0
+```
+
 
 From this file the number of users is determined. Their ids are in ascending order.
 The matrix above corresponds to the following users:
@@ -30,7 +33,7 @@ The ids of the corrupt users, one id per line (0, num_users-1]
 One id per line for the users that will attempt to send a message, duplicates are
 allowed of course, ids of users found in corrupted-file are not allowed in this file
 
-*broken-paths
+  - broken-paths
 The number of paths the corrupted users can break for each sending
 
   - fix-strategy
