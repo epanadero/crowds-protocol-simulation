@@ -35,7 +35,6 @@ The simulation receives as input the following arguments:
 The number of paths the corrupted users can break for each sending
 
 - fix-strategy<br/>
-  Can be "initiator" or "last-honest". If broken-paths is 0, the this is never applied. Still, it must be provided.
-  This determines the recovery method applied when an adversary breaks a path.<br/>
+  Can be "initiator" or "last-honest". If broken-paths is 0, the this is never applied. Still, it must be provided. This determines the recovery method applied when an adversary breaks a path.<br/>
   If set to "initiator", then the sender must rebuild the path from the beginning.<br/>
   If set to "last-honest", then the previous user before the corrupt user that just detected them must try to forward again.
