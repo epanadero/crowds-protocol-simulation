@@ -33,9 +33,7 @@ except Exception as e:
     sys.exit()
 
 #Create users-file
-users_file = open('./users-file', 'w')
 for i, f in enumerate(apriori):
     n = int(num_iterations*f)
     for j in range(n):
-        users_file.write(str(i)+'\n')
-users_file.close()
+        print(i)
