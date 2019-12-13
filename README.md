@@ -7,10 +7,10 @@ $ python3 simulate.py <phi> <graph-file> <corrupted-file> <users-file> <broken-p
 
 
 The simulation receives as input the following arguments:
-*phi
+  - phi
 Forwarding probability
 
-*graph-file
+  - graph-file
 The adjacency matrix of the users. This is expected to be an n x n matrix
 e.g.
 0 1 0
@@ -23,17 +23,17 @@ user[id=0] connected with (user[id=1])
 user[id=1] connected with (user[id=0], user[id=2])
 user[id=2] connected with (user[id=1])
 
-*corrupted-file
+  - corrupted-file
 The ids of the corrupt users, one id per line (0, num_users-1]
 
-*users-file
+  - users-file
 One id per line for the users that will attempt to send a message, duplicates are
 allowed of course, ids of users found in corrupted-file are not allowed in this file
 
 *broken-paths
 The number of paths the corrupted users can break for each sending
 
-*fix-strategy
+  - fix-strategy
 Can be "initiator" or "last-honest". If broken-paths is 0, the this is never applied. Still, it must be provided.
 This determines the recovery method applied when an adversary breaks a path.
 If set to "initiator", then the sender must rebuild the path from the beginning.
