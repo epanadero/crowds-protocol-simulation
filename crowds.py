@@ -55,7 +55,7 @@ class CrowdsSimulation:
 
     def fix(self):
         if self.fix_strategy == 'initiator':
-            self.stack = self.stack[0]
+            self.stack = self.stack[0:1]
         else:
             #last-honest
             del self.stack[-1]
