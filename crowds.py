@@ -74,7 +74,7 @@ class CrowdsSimulation:
 
         if will_forward:
             #return a random user from this user's edges
-            return user.edges[random.randint(0,len(user.edges)-1)]
+            return random.choice(user.edges)
         else:
             #the message is sent to the server
             return None
