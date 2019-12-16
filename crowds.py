@@ -31,11 +31,11 @@ class CrowdsSimulation:
         #start the stack with just the sender
         self.stack = [self.graph[user_id]]
         broken_paths_left = self.broken_paths
-        print(str(self.stack[0].id)+':', end='')
 
         next_user = self.choose_forward()
 
-        #keep forwarding while the message is not sent to the server
+        #keep forwarding while the message is not sent to the 
+        self.output = ''
         while next_user is not None:
             self.stack.append(next_user)
             if self.stack[-1].is_corrupt:
@@ -46,12 +46,13 @@ class CrowdsSimulation:
                 self.fix()
             next_user = self.choose_forward()
 
-        print()
+        #print the output without the last space
+        print(self.output[:-1])
 
 
     def detect(self, user):
         #This user got detected by a corrupt user
-        print(' '+str(user.id), end='')
+        self.output += str(user.id) + ' '
 
     def fix(self):
         if self.fix_strategy == 'initiator':
