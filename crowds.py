@@ -46,8 +46,11 @@ class CrowdsSimulation:
                 self.fix()
             next_user = self.choose_forward()
 
-        #print the output without the last space
-        print(self.output[:-1])
+        #print the output without the last space or '-' if it's empty
+        if self.output == '':
+            print('-')
+        else:
+            print(self.output[:-1])
 
 
     def detect(self, user):
