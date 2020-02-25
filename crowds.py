@@ -34,7 +34,7 @@ class CrowdsSimulation:
 
         next_user = self.choose_forward()
 
-        #keep forwarding while the message is not sent to the 
+        #keep forwarding while the message is not sent to the server
         self.output = ''
         while next_user is not None:
             self.stack.append(next_user)
@@ -45,6 +45,10 @@ class CrowdsSimulation:
                     break
                 self.fix()
             next_user = self.choose_forward()
+            
+            #The server is controlled by the adversary. Sending to the server causes a detection.
+            if next_user is None:
+                self.detect(self.stack[-1])
 
         #print the output without the last space or '-' if it's empty
         if self.output == '':

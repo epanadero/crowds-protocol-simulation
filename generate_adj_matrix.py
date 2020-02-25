@@ -1,6 +1,7 @@
 import sys
 import random
 
+assert len(sys.argv) == 3, 'Usage: python generate_adj_matrix.py <num_users> <adj_probability>'
 num_users = int(sys.argv[1])
 assert num_users > 0, 'Positive integer for num users'
 adj_prob = float(sys.argv[2])

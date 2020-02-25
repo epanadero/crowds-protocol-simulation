@@ -16,7 +16,7 @@ with open(fbleau_input, mode='w') as f_input:
 
     for sender, out in zip(users_file, simulation_out):
         sender = sender[:-1]
-        key = tuple(sorted(out.split()))
+        key = tuple(out.split())
         if key not in d:
             d[key] = len(d)
         csv_writer.writerow([sender, d[key]])
