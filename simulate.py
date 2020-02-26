@@ -10,7 +10,7 @@ if len(args) != 7:
 #phi
 try:
     phi = float(args[1])
-    if phi <=0 or phi >=1:
+    if phi < 0 or phi >= 1:
         raise Exception('phi must be within (0,1)')
 except Exception as e:
     print('phi: ' + str(e))
@@ -48,7 +48,7 @@ try:
         user_id = int(line)
         
         if user_id < 0 or user_id >= num_users:
-            raise Exception('user ids must be within [0, num_users-1). Found '+str(user_id)+' in line '+str(i))
+            raise Exception('user ids must be within [0, num_users-1]. Found '+str(user_id)+' in line '+str(i))
         if user_id in corrupted_users:
             raise Exception('found duplicate user id in line '+str(i))
         
@@ -67,7 +67,7 @@ try:
         user_id = int(line)
 
         if user_id < 0 or user_id >= num_users:
-            raise Exception('user ids must be within [0, num_users-1). Found '+str(user_id)+' in line '+str(i))
+            raise Exception('user ids must be within [0, num_users-1]. Found '+str(user_id)+' in line '+str(i))
         if user_id in corrupted_users:
             raise Exception('user ids must not be in corrupted-file: a sender may not be corrupt')
 

@@ -1,6 +1,7 @@
 import random
+import sys
 
-n = int(input("Number of items: "))
+n = int(sys.argv[1])
 
 distribution = []
 
@@ -12,6 +13,7 @@ s = sum(distribution)
 for i in range(n):
 	distribution[i] /= s
 
-print(distribution)
+for i in distribution:
+    print(i)
 
 print('Sum is: {}'.format(sum(distribution)))

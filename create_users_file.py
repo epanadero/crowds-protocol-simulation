@@ -1,5 +1,7 @@
 import sys
 
+tol = 1e-5
+
 if len(sys.argv) != 3:
     print('Usage: python create_users_file.py <apriori-file> <num-iterations>')
     sys.exit()
@@ -17,7 +19,8 @@ try:
 
     apriori_file.close()
 
-    if sum(apriori) != 1:
+    s = sum(apriori)
+    if abs(s-1) > tol:
         raise Exception('probabilities must sum to 1')
 except Exception as e:
     print('apriori-file: '+str(e))

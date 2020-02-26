@@ -12,7 +12,7 @@ fbleau_input = sys.argv[3]
 d = {}
 
 with open(fbleau_input, mode='w') as f_input:
-    csv_writer = csv.writer(f_input, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
+    csv_writer = csv.writer(f_input, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
     for sender, out in zip(users_file, simulation_out):
         sender = sender[:-1]
