@@ -46,10 +46,10 @@ e.g. <br/>
   ```
 This means that user 0 sent two messages. The first time, users 1 and 2 were detected by a corrupt user and the second time the user themselves got detected twice. User 1 sent one message and users 1,3 and 2 got detected during that sending.
 
-# Create users file automatically
+# Generate users file automatically
 You may also generate a users-file automatically by running
 ```sh
-$ python3 create_users_file.py <apriori-file> <num-iterations>
+$ python3 generate_users_file.py <apriori-file> <num-iterations>
 ```
 - apriori-file<br/>
 The apriori knowledge the adversary has about the users. For each line, which also corresponds to a user id, provide the probability at which the user with id 'number of line-1' sends messages in the network. Corrupt users should have 0, but this is not checked in this context. The sum of the float numbers in this file must be 1.
