@@ -7,7 +7,7 @@ def p(s):
 
 cor = ['cor', 'nocor']
 uniform = ['uniform', 'nouniform']
-phis = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.92, 0.94, 0.96, 0.98, 0.99, 1]
+phis = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.92, 0.94, 0.96, 0.98, 0.99]
 fix = ['last-honest', 'initiator']
 
 simulate_path = p('simulate.py')
