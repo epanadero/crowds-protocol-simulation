@@ -43,6 +43,8 @@ e.g. <br/>
 0: 1 2
 0: 0 0
 1: 1 3 2
+
+*The 'id:' parts are not printed
   ```
 This means that user 0 sent two messages. The first time, users 1 and 2 were detected by a corrupt user and the second time the user themselves got detected twice. User 1 sent one message and users 1,3 and 2 got detected during that sending.
 
